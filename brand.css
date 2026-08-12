@@ -1,0 +1,177 @@
+/*
+  Impct / brand.css
+  Regole CSS derivate da "Impact-logo-manual.pdf"
+  (colori, gradiente, font, testo evidenziato).
+
+  Font corporate: Helvetica Neue LT Pro, distribuito via Adobe Fonts
+  (Typekit kit "ecf4ris"). Per attivarlo, includere nell'<head> di ogni
+  pagina che usa questo foglio di stile (prima del CSS del sito):
+
+    <link rel="stylesheet" href="https://use.typekit.net/ecf4ris.css">
+
+  Pesi/stili pubblicati dal kit (vedi website/webfonts.txt):
+    - 400 normal (Roman)
+    - 700 normal (Bold)
+    - 700 italic (Bold Italic)
+*/
+
+:root {
+  /* Corporate colors — HEX/RGB da manuale pagina 4 */
+  --impct-rose: #d53f61;    /* R213 G63 B97 */
+  --impct-purple: #6600fc;  /* R102 G0 B252 */
+  --impct-green: #00f300;   /* R0 G243 B0 */
+
+  /* Neutrals per positive/negative come da manuale pagine 1-3 */
+  --impct-black: #000000;
+  --impct-white: #ffffff;
+  --impct-gray-050: #f4f4f5;
+  --impct-gray-200: #e2e2e6;
+  --impct-gray-500: #8a8a94;
+
+  /* Gradiente brand (logo, pagina 4) */
+  --impct-gradient: linear-gradient(
+    100deg,
+    var(--impct-rose) 0%,
+    var(--impct-purple) 55%,
+    var(--impct-green) 100%
+  );
+
+  /* Font corporate: Helvetica Neue LT Pro (manuale pagina 5), servito da
+     Adobe Fonts/Typekit (vedi link in cima al file). Fallback di sistema
+     nel caso lo script Typekit non si carichi. */
+  --impct-font-roman: helvetica-neue-lt-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --impct-font-weight-roman: 400;
+  --impct-font-weight-bold: 700;
+  --impct-font-style-normal: normal;
+  --impct-font-style-italic: italic;
+
+  /* Scala spaziature/raggio riutilizzabile per bottoni e badge */
+  --impct-radius-pill: 999px;
+  --impct-radius-md: 12px;
+  --impct-space-1: 0.5rem;
+  --impct-space-2: 1rem;
+  --impct-space-3: 1.5rem;
+  --impct-space-4: 2.5rem;
+  --impct-space-5: 4rem;
+}
+
+/* Reset minimo */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--impct-font-roman);
+  font-weight: var(--impct-font-weight-roman);
+  color: var(--impct-black);
+  background: var(--impct-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografia corporate (manuale pagina 5) */
+.impct-text-roman {
+  font-weight: var(--impct-font-weight-roman);
+  font-style: var(--impct-font-style-normal);
+}
+.impct-text-bold {
+  font-weight: var(--impct-font-weight-bold);
+  font-style: var(--impct-font-style-normal);
+}
+.impct-text-bold-italic {
+  font-weight: var(--impct-font-weight-bold);
+  font-style: var(--impct-font-style-italic);
+}
+
+/* Testo evidenziato: bold + sfondo verde, come da manuale pagina 5 */
+.impct-highlight {
+  font-weight: var(--impct-font-weight-bold);
+  background-color: var(--impct-green);
+  color: var(--impct-black);
+  padding: 0.05em 0.2em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Superfici brand riutilizzabili */
+.impct-surface-gradient {
+  background: var(--impct-gradient);
+  color: var(--impct-white);
+}
+.impct-surface-purple {
+  background: var(--impct-purple);
+  color: var(--impct-white);
+}
+.impct-surface-dark {
+  background: var(--impct-black);
+  color: var(--impct-white);
+}
+.impct-surface-light {
+  background: var(--impct-gray-050);
+  color: var(--impct-black);
+}
+
+/* Bottoni corporate: pill verde (primario) e outline (secondario) */
+.impct-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-family: var(--impct-font-roman);
+  font-weight: var(--impct-font-weight-bold);
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--impct-radius-pill);
+  padding: 0.85em 1.6em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.impct-btn:hover { transform: translateY(-1px); }
+.impct-btn:focus-visible {
+  outline: 3px solid var(--impct-purple);
+  outline-offset: 2px;
+}
+
+.impct-btn--primary {
+  background: var(--impct-green);
+  color: var(--impct-black);
+}
+.impct-btn--primary:hover { background: #17ff17; }
+
+.impct-btn--secondary {
+  background: var(--impct-purple);
+  color: var(--impct-white);
+}
+.impct-btn--secondary:hover { background: #7b1aff; }
+
+.impct-btn--outline {
+  background: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+.impct-btn--outline:hover { background: rgba(0, 0, 0, 0.06); }
+.impct-surface-purple .impct-btn--outline:hover,
+.impct-surface-gradient .impct-btn--outline:hover,
+.impct-surface-dark .impct-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Eyebrow / kicker label (piccole label maiuscole con trattino, ricorrenti nel layout) */
+.impct-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 0.8rem;
+  font-weight: var(--impct-font-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--impct-purple);
+}
+.impct-eyebrow::before {
+  content: "";
+  width: 1.5em;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+}
+.impct-eyebrow--on-dark { color: var(--impct-green); }
+.impct-eyebrow--rose { color: var(--impct-rose); }
+.impct-eyebrow--white { color: var(--impct-white); }

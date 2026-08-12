@@ -1,0 +1,355 @@
+/* brand.css (colori, font, componenti brand) è linkato direttamente
+   nell'<head> di index.html, prima di questo file — non serve @import qui. */
+
+/* ==========================================================================
+   Impct landing page — layout & component styles
+   Contenuto e struttura fedeli a "Impct-landing-layout.pdf"
+   ========================================================================== */
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+img, svg { display: block; max-width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+section { padding-block: var(--impct-space-5); }
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: var(--impct-space-4);
+}
+.section-head h2 {
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.75rem);
+  line-height: 1.1;
+  margin: 0.6em 0 0;
+  color: var(--impct-purple);
+}
+.impct-surface-purple .section-head h2,
+.impct-surface-gradient .section-head h2,
+.impct-surface-dark .section-head h2 { color: var(--impct-white); }
+.impct-surface-gradient .section-head h2 { color: var(--impct-green); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 4.5rem;
+  padding-inline: 1.5rem;
+  background: var(--impct-white);
+  border-bottom: 1px solid var(--impct-gray-200);
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--impct-purple);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.logo-full { height: 28px; width: auto; display: block; }
+.header-actions { display: flex; align-items: stretch; gap: 0; }
+.header-actions .impct-btn {
+  border-radius: 0;
+  height: 100%;
+  padding-inline: 1.75rem;
+}
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--impct-white);
+  background: var(--impct-purple);
+  border-radius: 0;
+  padding-inline: 1.25rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: calc(100vh - 4.5rem);
+  min-height: calc(100svh - 4.5rem);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-block: var(--impct-space-4);
+}
+.hero .container { width: 100%; }
+.impct-eyebrow--hero {
+  color: var(--impct-rose);
+  font-weight: var(--impct-font-weight-roman);
+  margin-bottom: 1.5rem;
+}
+.impct-eyebrow--hero::before { background: var(--impct-rose); }
+.hero h1 {
+  font-size: clamp(3rem, 11vw, 9rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.hero h1 .line-purple { color: var(--impct-purple); }
+.hero h1 .line-green { color: var(--impct-green); -webkit-text-stroke: 0; }
+
+/* ---------- Stat strip (used on gradient + opportunity sections) ---------- */
+.stat-strip {
+  margin-top: var(--impct-space-4);
+  padding-top: var(--impct-space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stat-strip .stat + .stat {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+.stat { padding: 0 1.25rem; }
+.stat:first-child { padding-left: 0; }
+.stat-value {
+  font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.stat-label {
+  margin-top: 0.4rem;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.impct-surface-gradient .stat-value { color: var(--impct-white); }
+/* Su sfondo a gradiente l'evidenziazione verde-su-verde perde contrasto:
+   qui invertiamo a testo verde su nero, restando nella stessa coppia brand. */
+.impct-surface-gradient .stat-label.impct-highlight {
+  background-color: var(--impct-black);
+  color: var(--impct-green);
+}
+
+.intro-band p {
+  max-width: 640px;
+  font-size: clamp(1.35rem, 1.6vw + 1rem, 1.85rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.intro-cta {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.intro-cta .impct-btn {
+  border-radius: 0;
+  padding: 1.1em 2.4em;
+  font-size: 1.05rem;
+}
+
+.intro-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin: var(--impct-space-4) 0 var(--impct-space-3);
+}
+
+.intro-band .stat-strip {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--impct-space-5);
+}
+.intro-band .stat-strip .stat {
+  padding: 0;
+  border-left: none !important;
+}
+.intro-band .stat-value {
+  font-size: clamp(2.4rem, 4vw + 1rem, 4.2rem);
+}
+.intro-band .stat-label {
+  display: table;
+}
+.intro-band .stat-label + .stat-label {
+  margin-top: 0.35rem;
+}
+
+/* ---------- How it works ---------- */
+.how-it-works .container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: var(--impct-space-5);
+  align-items: center;
+}
+.steps { display: grid; gap: 2rem; }
+.step { display: grid; grid-template-columns: auto 1fr; gap: 1rem; }
+.step-index {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--impct-black);
+  background: var(--impct-green);
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.step h3 { margin: 0 0 0.4rem; font-size: 1.15rem; color: var(--impct-black); }
+.step p { margin: 0; color: var(--impct-black); line-height: 1.55; }
+
+.flow-diagram {
+  background: linear-gradient(165deg, var(--impct-rose) 0%, var(--impct-purple) 55%, var(--impct-purple) 100%);
+  border-radius: 28px;
+  padding: var(--impct-space-4) var(--impct-space-3);
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 0.65rem 1.1rem;
+  color: var(--impct-white);
+}
+.flow-icon-img { width: 40px; height: auto; }
+.flow-text strong {
+  display: inline-block;
+  font-size: 0.95rem;
+}
+.flow-text span {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.2rem;
+}
+.flow-arrow {
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- Mission ---------- */
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--impct-space-5);
+  align-items: start;
+}
+.mission-lead {
+  margin: 0 0 var(--impct-space-4);
+  max-width: 560px;
+  font-size: clamp(1.1rem, 1.2vw + 0.9rem, 1.35rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--impct-white);
+}
+.pillars {
+  display: grid;
+  gap: 1.5rem;
+}
+.pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.pillar-icon { width: 32px; height: auto; flex: none; margin-top: 0.1rem; }
+.pillar h3 { margin: 0 0 0.3rem; font-size: 1.05rem; color: var(--impct-white); }
+.pillar p { margin: 0; color: rgba(255, 255, 255, 0.8); line-height: 1.5; font-size: 0.95rem; }
+
+.mission-card {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 28px;
+  padding: var(--impct-space-4);
+}
+.mission-card-quote {
+  display: table;
+  margin: 0 0 var(--impct-space-3);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.mission-card p {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.mission-card-highlight {
+  margin-top: 1.5rem;
+  color: var(--impct-green);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+/* ---------- Built for scale ---------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--impct-space-3);
+}
+.feature-icon { height: 26px; width: auto; display: block; margin-bottom: 0.75rem; }
+.feature h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.feature p { margin: 0; color: var(--impct-gray-500); line-height: 1.5; font-size: 0.95rem; }
+
+/* ---------- Opportunity ---------- */
+.opportunity p { color: rgba(255, 255, 255, 0.9); }
+
+/* ---------- Final CTA ---------- */
+.final-cta {
+  text-align: left;
+}
+.final-cta h2 {
+  font-size: clamp(2rem, 4.5vw + 1rem, 3.6rem);
+  line-height: 1.15;
+  margin: 0.6em 0 1.5rem;
+}
+.final-cta p { max-width: 520px; color: rgba(255, 255, 255, 0.75); margin-bottom: 2rem; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--impct-black);
+  color: rgba(255, 255, 255, 0.7);
+  padding-block: var(--impct-space-4);
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: var(--impct-space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+}
+.footer-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; }
+.footer-links a:hover { color: var(--impct-green); }
+.footer-bottom {
+  padding-top: var(--impct-space-3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.78rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .how-it-works .container { grid-template-columns: 1fr; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .stat-strip { grid-template-columns: 1fr; row-gap: 1rem; }
+  .stat-strip .stat { padding: 0; border-left: none !important; padding-top: 1rem; }
+  .stat-strip .stat:first-child { padding-top: 0; }
+}
