@@ -107,6 +107,10 @@ body {
   background: var(--impct-gray-050);
   color: var(--impct-black);
 }
+.impct-surface-green {
+  background: var(--impct-green);
+  color: var(--impct-black);
+}
 
 /* Bottoni corporate: pill verde (primario) e outline (secondario) */
 .impct-btn {
@@ -148,6 +152,12 @@ body {
   color: inherit;
 }
 .impct-btn--outline:hover { background: rgba(0, 0, 0, 0.06); }
+
+.impct-btn--dark {
+  background: var(--impct-black);
+  color: var(--impct-white);
+}
+.impct-btn--dark:hover { background: #1a1a1a; }
 .impct-surface-purple .impct-btn--outline:hover,
 .impct-surface-gradient .impct-btn--outline:hover,
 .impct-surface-dark .impct-btn--outline:hover {
@@ -175,3 +185,16 @@ body {
 .impct-eyebrow--on-dark { color: var(--impct-green); }
 .impct-eyebrow--rose { color: var(--impct-rose); }
 .impct-eyebrow--white { color: var(--impct-white); }
+
+/* Small pill badge — green fill, used as a standalone label (manuale pagina 5) */
+.impct-badge {
+  display: inline-block;
+  background: var(--impct-green);
+  color: var(--impct-black);
+  font-weight: var(--impct-font-weight-bold);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4em 1em;
+  border-radius: var(--impct-radius-pill);
+}

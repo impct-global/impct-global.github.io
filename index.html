@@ -12,12 +12,16 @@
 <body>
 
 <header class="site-header">
-  <a href="#" class="logo">
-    <img src="svg/SVG/IMPCT-logo-color-pos.svg" alt="Impct — for life" class="logo-full">
-  </a>
-  <div class="header-actions">
-    <a href="#book-a-call" class="impct-btn impct-btn--primary">GET STARTED</a>
-    <span class="lang-switch">EN</span>
+  <div class="container">
+    <div class="content-header">
+      <a href="#" class="logo">
+        <img src="svg/SVG/IMPCT-logo-color-pos.svg" alt="Impct — for life" class="logo-full">
+      </a>
+      <div class="header-actions">
+        <a href="#book-a-call" class="impct-btn impct-btn--primary">GET STARTED</a>
+        <span class="lang-switch">EN</span>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -182,78 +186,128 @@
 
       <div class="feature-grid">
         <div class="feature">
-          <img src="svg/SVG/API-6600fc-ico.svg" alt="" class="feature-icon">
-          <h3>API-first</h3>
-          <p>One endpoint. Works with any ticketing system. Designed for fast, simple integration.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/API-6600fc-ico.svg" alt="" class="feature-icon">
+          </div>
+           <div class="wrapper-content">
+             <h3 class="impct-highlight">API-first</h3>
+             <p>One endpoint. Works with any ticketing system. Designed for fast, simple integration.</p>
+           </div>
         </div>
         <div class="feature">
-          <img src="svg/SVG/blockchain-6600fc-ico.svg" alt="" class="feature-icon">
-          <h3>Blockchain verified</h3>
-          <p>Every contribution permanent and public. Your audience can verify every transaction themselves.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/blockchain-6600fc-ico.svg" alt="" class="feature-icon">
+          </div>
+          <div class="wrapper-content">
+            <h3  class="impct-highlight">Blockchain verified</h3>
+            <p>Every contribution permanent and public. Your audience can verify every transaction themselves.</p>
+          </div>
         </div>
         <div class="feature">
-          <img src="svg/SVG/dashboard-ico.svg" alt="" class="feature-icon">
-          <h3>Live dashboard</h3>
-          <p>Embeddable on your website. Real-time children supported counter, updated with every ticket sold.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/dashboard-ico.svg" alt="" class="feature-icon">
+          </div>
+          <div class="wrapper-content">
+            <h3 class="impct-highlight">Live dashboard</h3>
+            <p>Embeddable on your website. Real-time children supported counter, updated with every ticket sold.</p>
+          </div>
         </div>
         <div class="feature">
-          <img src="svg/SVG/security-ico.svg" alt="" class="feature-icon">
-          <h3>Security-first</h3>
-          <p>Financial-grade security from day one. HMAC-signed webhooks, zero PII stored.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/security-ico.svg" alt="" class="feature-icon">
+          </div>
+          <div class="wrapper-content">
+            <h3 class="impct-highlight">Security-first</h3>
+            <p>Financial-grade security from day one. HMAC-signed webhooks, zero PII stored.</p>
+          </div>
         </div>
         <div class="feature">
-          <img src="svg/SVG/mail-ico.svg" alt="" class="feature-icon">
-          <h3>Impact receipts</h3>
-          <p>After every event, buyers receive personal proof of the change their ticket created. Evidence, not marketing.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/mail-ico.svg" alt="" class="feature-icon">
+          </div>
+          <div class="wrapper-content">
+            <h3 class="impct-highlight">Impact receipts</h3>
+            <p>After every event, buyers receive personal proof of the change their ticket created. Evidence, not marketing.</p>
+          </div>
         </div>
         <div class="feature">
-          <img src="svg/SVG/Global-ico.svg" alt="" class="feature-icon">
-          <h3>Global reach</h3>
-          <p>Verified partnerships with foundations operating worldwide. Every festival, everywhere — connected to the same mission.</p>
+          <div class="wrapper-img">
+            <img src="svg/SVG/Global-ico.svg" alt="" class="feature-icon">
+          </div>
+          <div class="wrapper-content">
+            <h3 class="impct-highlight">Global reach</h3>
+            <p>Verified partnerships with foundations operating worldwide. Every festival, everywhere — connected to the same mission.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- The opportunity + Final CTA + Why impct exists share one continuous
+       gradient background (see .closing-gradient), matching the reference PDF -->
+  <div class="closing-gradient">
+
   <!-- The opportunity -->
-  <section class="opportunity impct-surface-gradient">
+  <section class="opportunity">
     <div class="container">
       <div class="section-head">
-        <span class="impct-eyebrow impct-eyebrow--on-dark">THE OPPORTUNITY</span>
+        <span class="impct-eyebrow impct-eyebrow--white">THE OPPORTUNITY</span>
         <h2>The market is ready.<br>The infrastructure wasn't.</h2>
         <p>Billions of tickets sold every year. None of them automatically, permanently supporting a child. Until now.</p>
       </div>
+      <hr class="section-divider">
       <div class="stat-strip">
         <div class="stat">
-          <div class="stat-value">€50B+</div>
-          <span class="stat-label impct-highlight">GLOBAL LIVE EVENTS MARKET</span>
+          <div class="stat-value impct-highlight">€50B+</div>
+          <span class="stat-label">GLOBAL LIVE EVENTS MARKET</span>
         </div>
         <div class="stat">
-          <div class="stat-value">500M+</div>
-          <span class="stat-label impct-highlight">TICKETS SOLD ANNUALLY</span>
+          <div class="stat-value impct-highlight">500M+</div>
+          <span class="stat-label">TICKETS SOLD ANNUALLY</span>
         </div>
         <div class="stat">
           <div class="stat-value">0</div>
-          <span class="stat-label impct-highlight">VERIFIED IMPACT INFRASTRUCTURE EXISTING</span>
+          <span class="stat-label">VERIFIED IMPACT INFRASTRUCTURE EXISTING</span>
         </div>
       </div>
+      <hr class="section-divider">
     </div>
   </section>
 
   <!-- Final CTA -->
-  <section class="final-cta impct-surface-dark" id="book-a-call">
-    <div class="container">
-      <span class="impct-eyebrow impct-eyebrow--on-dark">JOIN THE MOVEMENT</span>
-      <h2><span class="impct-highlight">Your festival.</span><br><span class="impct-highlight">A child's future.</span></h2>
-      <p>20 minutes. No pitch deck. No pressure. A conversation about whether impct makes sense for your event — and the children it could support.</p>
+  <section class="final-cta" id="book-a-call">
+    <div class="container final-cta-inner">
+      <div class="final-cta-copy">
+        <span class="impct-eyebrow impct-eyebrow--white">JOIN THE MOVEMENT</span>
+        <h2><span class="impct-highlight">Your festival.</span><br><span class="impct-highlight">A child's future.</span></h2>
+        <p>20 minutes. No pitch deck. No pressure. A conversation about whether impct makes sense for your event — and the children it could support.</p>
+      </div>
       <a href="mailto:mia@impctglobal.com" class="impct-btn impct-btn--primary">BOOK A CALL</a>
     </div>
   </section>
 
-</main>
+  <!-- Why impct exists -->
+  <section class="founder-story">
+    <div class="container">
+      <div class="founder-copy">
+        <p class="founder-tag impct-highlight">Why impct exists</p>
+        <p class="founder-lead">I'm Mia, founder of impct.</p>
+        <p>For years, I designed spaces where people come together. But it was inside festivals that I witnessed something extraordinary: thousands of strangers becoming a community.</p>
+        <p>People from different countries, cultures, and backgrounds connected by music, joy, and a shared experience. It made me realize the power of people coming together around something they love.</p>
+        <p>I started asking a simple question:</p>
+        <p class="founder-quote">What if that same community could create opportunities for young people who need them most — without changing a single thing about the festival experience?</p>
+        <p>I couldn't find the infrastructure to make it possible.<br>So together with Toni, our CTO, we decided to build it.</p>
+        <p>At impct, we believe that small actions, multiplied by millions of people, can create meaningful change. Our mission is to transform moments of connection into lasting impact and create opportunities for the next generation.</p>
+        <img src="svg/SVG/MB-sign.svg" alt="Mia's signature" class="founder-signature">
+      </div>
+    </div>
+  </section>
 
-<footer class="site-footer">
+  </main>
+
+  <footer class="site-footer">
   <div class="container">
+    <hr class="section-divider">
     <div class="footer-top">
       <a href="#" class="logo">
         <img src="svg/SVG/IMPCT-logo-bn-neg.svg" alt="Impct — for life" class="logo-full">
@@ -270,6 +324,8 @@
     </div>
   </div>
 </footer>
+
+  </div><!-- /.closing-gradient -->
 
 </body>
 </html>
