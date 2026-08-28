@@ -169,16 +169,16 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.6em;
-  font-size: 0.8rem;
-  font-weight: var(--impct-font-weight-bold);
-  letter-spacing: 0.08em;
+  font-size: 1rem;
+  font-weight: var(--impct-font-weight-normal);
+  
   text-transform: uppercase;
   color: var(--impct-purple);
 }
 .impct-eyebrow::before {
   content: "";
-  width: 1.5em;
-  height: 2px;
+  width: 3.5em;
+  height: 1px;
   background: currentColor;
   display: inline-block;
 }
