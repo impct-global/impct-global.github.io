@@ -443,7 +443,7 @@ section { padding-block: var(--impct-space-5); }
   justify-content: space-between;
   gap: 1.5rem;
   padding-bottom: var(--impct-space-3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 .footer-links {
   display: flex;
@@ -459,6 +459,12 @@ section { padding-block: var(--impct-space-5); }
   justify-content: space-between;
   gap: 0.75rem;
   font-size: 0.78rem;
+}
+.site-footer .logo-full {
+    height: 65px;
+}
+.footer-links{
+  align-items: center;
 }
 
 /* ---------- Responsive ---------- */
@@ -512,4 +518,10 @@ section { padding-block: var(--impct-space-5); }
   .intro-band .stat-strip{
     gap: var(--impct-space-4);
   }
+  .footer-links{
+    gap:.5rem;
+  }
+  .site-footer .logo-full {
+    height: 45px;
+}  
 }
