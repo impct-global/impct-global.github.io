@@ -506,4 +506,10 @@ section { padding-block: var(--impct-space-5); }
     gap: 0;
     flex-wrap: nowrap;
   }
+  .section-head h2{
+    font-size: 2.6rem;
+  }
+  .intro-band .stat-strip{
+    gap: var(--impct-space-4);
+  }
 }
