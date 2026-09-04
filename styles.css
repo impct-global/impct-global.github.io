@@ -324,9 +324,9 @@ section { padding-block: var(--impct-space-5); }
   gap: 1rem;
 }
 
-.feature-icon { height: 50px; width: auto; display: block; margin-bottom: 0.75rem; }
-.feature .wrapper-img { display: flex; justify-content: center; margin-bottom: 0.75rem;width:100px; }
-.feature .wrapper-content { text-align: left; }
+.feature-icon { height: 40px; width: auto; display: block; margin-bottom: 0.75rem; }
+.feature .wrapper-img { display: flex; justify-content: center; margin-bottom: 0.75rem;width:50px; }
+.feature .wrapper-content { text-align: left; flex:1 }
 .feature h3 { margin: 0 0 0.1rem; font-size: 1.05rem; display: inline-block }
 .feature p { margin: 0; color: var(--impct-gray-500); line-height: 1.5; font-size: 0.95rem; }
 
